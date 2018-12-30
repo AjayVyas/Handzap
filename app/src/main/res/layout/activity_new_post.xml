@@ -1,0 +1,302 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.NewPostActivity">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEnterPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPostTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lbl_enter_post_title"
+                    android:maxLength="50"
+                    android:textColor="@color/colorAccent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.assignment.handzap.util.CharCountTextView
+                android:id="@+id/tvPostTitleCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tilEnterPost"
+                app:layout_constraintTop_toBottomOf="@+id/tilEnterPost" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilDescribePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginStart="@dimen/dimen_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvPostTitleCounter">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etDescribePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lbl_describe"
+                    android:maxLength="400"
+                    android:maxLines="3"
+                    android:textColor="@color/colorAccent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.assignment.handzap.util.CharCountTextView
+                android:id="@+id/tvDescribeCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tilEnterPost"
+                app:layout_constraintTop_toBottomOf="@+id/tilDescribePost" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilPostCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginStart="@dimen/dimen_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescribeCounter">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPostCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_menu"
+                    android:drawableRight="@drawable/ic_menu"
+                    android:hint="@string/lbl_select_post_categories"
+                    android:inputType="none"
+                    android:textColor="@color/colorAccent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                app:layout_constraintTop_toBottomOf="@+id/tilPostCategories">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilBudget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_16"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etBudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_budget"
+                        android:inputType="number"
+                        android:textColor="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginEnd="@dimen/dimen_16"
+                    android:layout_marginRight="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/spinCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvCountryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/spinCountry"
+                        android:padding="@dimen/dimen_7"
+                        android:text="INR" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tvCountryName"
+                        android:background="@color/catNameBgColor" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRateContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/llBudget">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_16"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_rate"
+                        android:inputType="none"
+                        android:textColor="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilPaymentMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_16"
+                    android:layout_marginRight="@dimen/dimen_16"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etPaymentMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_payment_method"
+                        android:inputType="none"
+                        android:textColor="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_16"
+                app:layout_constraintTop_toBottomOf="@+id/llRateContainer">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_location_24dp"
+                    android:drawableRight="@drawable/ic_location_24dp"
+                    android:hint="@string/lbl_post_location"
+                    android:inputType="none"
+                    android:textColor="@color/colorAccent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llDateContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tilLocation">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_16"
+                    android:layout_marginRight="@dimen/dimen_16"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_start_date"
+                        android:inputType="none"
+                        android:textColor="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilJobTerm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etJobTerm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_job_term"
+                        android:inputType="none"
+                        android:textColor="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/llDateContainer">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_post_attch"
+                    android:textColor="@color/darkText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dimen_16"
+                        android:background="#efeff4"
+                        android:padding="@dimen/dimen_5">
+
+                        <ImageView
+                            android:id="@+id/ivAdaAttachment"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/add_bg"
+                            android:src="@drawable/ic_add_24dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_10"
+                            android:divider="@null"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

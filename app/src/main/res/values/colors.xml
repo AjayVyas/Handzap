@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#276c83</color>
+    <color name="colorPrimaryDark">#1F5668</color>
+    <color name="colorAccent">#276c83</color>
+
+    <color name="hintColor">#c9c9ce</color>
+
+    <color name="catNameBgColor">#80000000</color>
+    <color name="transparentColorPrimary">#F2276c83</color>
+
+    <color name="colorBack">#d3f4ff</color>
+
+    <color name="darkText">#828282</color>
+
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Handzap</string>
+    <string name="lbl_add_new_post">Add New Post</string>
+    <string name="lbl_enter_post_title">Enter Post Title</string>
+    <string name="lbl_describe">Describe your post</string>
+
+    <string name="lbl_character_left">%d characters left</string>
+
+    <string name="lbl_select">Select</string>
+    <string name="lbl_max_categories">Maximum 3 Categories</string>
+    <string name="lbl_post_title">Post Title</string>
+    <string name="lbl_post_desc">Post Description</string>
+    <string name="lbl_select_post_categories">Select Post Categories</string>
+    <string name="lbl_post_categories">Post Categories</string>
+    <string name="lbl_budget">Budget</string>
+    <string name="lbl_rate">Rate</string>
+    <string name="lbl_payment_method">Payment Method</string>
+    <string name="lbl_cancel">CANCEL</string>
+    <string name="lbl_upto_cat">Select up to 3 Categories</string>
+    <string name="lbl_post_location">Post Location</string>
+    <string name="lbl_job_term">Job Term</string>
+    <string name="lbl_start_date">Start Date</string>
+    <string name="lbl_post_attch">Post Attachments</string>
+    <string name="lbl_capture_image">Capture Image</string>
+    <string name="lbl_capture_video">Capture Video</string>
+    <string name="lbl_photo_amp_video_library"><![CDATA[Photo & Video Library]]></string>
+    <string name="lbl_document">Document</string>
+    <string name="lbl_new_post">New Post</string>
+    <string name="lbl_post">Post</string>
+
+</resources>
